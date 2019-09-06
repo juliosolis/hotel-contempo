@@ -1,6 +1,6 @@
 var __nby_opciones = __nby_opciones || {
     cuenta: 2,
-    idioma: "en",
+    idioma: lang,
     canal: 1
 };
 (function (d) {
