@@ -72,6 +72,29 @@
 
 </head>
 <body itemscope>
+	<!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v5.0'
+          });
+        };
+
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+      <!-- Your customer chat code -->
+      <div class="fb-customerchat"
+        attribution=setup_tool
+        page_id="174901742525435">
+      </div>
 <div class="theme-layout">
 	<div class="header-container creative transparent stick">
 		
@@ -218,19 +241,19 @@
 								<div class="col-md-4">
 									<div class="sp-offer">
 										<div class="offer-img  gallery-img lightbox">
-											<img src="images/home/promos/ES_menú_festivo_mini.jpg" alt="Nicaragua Offers" />
+											<img src="images/home/promos/masayavolcano_mini.jpg" alt="Nicaragua Offers" />
 											<!-- <ul>
 												<li><i class="fa fa-bank"></i> Hotel: 5 Star</li>
 												<li><i class="fa fa-clock-o"></i> Duration: 10 Days</li>
 												<li><i class="fa fa-male"></i> Person: 02</li>
 											</ul> -->
 											<div class="gallery-overlay">
-												<a title="" href="images/home/promos/ES_menú_festivo_big.jpg">+</a>
+												<a title="" href="images/home/promos/volcanmasaya.jpg">+</a>
 											</div>
 										</div>
 										<div class="offer-detail">
-											<h3><a title="">Menú Especial</a></h3>
-											<div class="cost">Disfrutá de tus festividades junto a tu familia con nuestro menú especial para llevar.<strong class="nearby_rel">¡Reserva ya!</strong>
+											<h3><a title="">Paquete Volcám</a></h3>
+											<div class="cost">Descubrí uno de los únicos lagos de lava en el mundo. A solo 10 minutos de nuestro hotel.<strong class="nearby_rel">¡Reserva ya!</strong>
 										</div>
 										</div>
 									</div><!-- Offer -->
@@ -249,8 +272,8 @@
 											</div>
 										</div>
 										<div class="offer-detail">
-											<h3><a title="">Menú de Fin de Año</a></h3>
-											<div class="cost">Disfrutá de nuestro menú especial de fin de año en tus días especiales.<strong class="nearby_rel">¡Reserva ya!</strong>.</div>
+											<h3><a title="">Escape Romántico</a></h3>
+											<div class="cost">Vive un escape romántico verdadero en Managua, Nicaragua<strong class="nearby_rel">Reservando ya</strong>este paquete especial.</div>
 										</div>
 									</div><!-- Offer -->
 								</div>
@@ -565,12 +588,21 @@
 			});
 
 		});
-
-		var lang = "es";
 	</script>
 
 	<!-- nearbooking updated -->
-	<script src="js/nearby.js"></script>
+	<script type="text/javascript">
+	var __nby_opciones = __nby_opciones || {
+	    cuenta: 2,
+	    idioma: "en",
+	    canal: 1
+	};
+	(function (d) {
+	    var t = d.createElement("script"); t.type = "text/javascript"; t.async = true;
+	    t.src = "https://cdn.nearbybooking.com/widget.js";
+	    var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(t, s);
+	})(document);
+	</script>
 
 </body>
 </html>
